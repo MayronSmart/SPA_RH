@@ -38,6 +38,7 @@ function populateSelect(selectElement, items, placeholder) {
     }
 }
 
+
 async function obterUsuarioAtual() {
     if (typeof BX24 !== "undefined" && BX24?.callMethod) {
         return new Promise((resolve) => {
