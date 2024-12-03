@@ -1,58 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Solicitação de Acesso Vila Smart</title>
-        <link rel="stylesheet" href="style.css">
-        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-        <script src="//api.bitrix24.com/api/v1/"></script>
-    </head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solicitação de Acesso Vila Smart</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="//api.bitrix24.com/api/v1/"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <h1>Solicitação de Abertura de Vaga</h1>
-    <form id="vagaForm"> <!-- Adicionado ID ao formulário -->
-        <div class="form-group">
-            <label for="nome-vaga">Nome da Vaga:</label>
-            <select id="nome-vaga" name="nome-vaga" required>
-                <option value="">Carregando opções...</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="motivos">Tipo da solicitação:</label>
-            <select id="motivos" name="motivos" required>
-                <option value="">Carregando opções...</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="colaborador">Colaborador a ser Substituido:</label>
-            <select id="colaborador" name="colaborador" required>
-                <option value="">Carregando opções...</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="vaga-confidencial">Vaga Confidencial</label>
-            <select id="vaga-confidencial" name="vaga-confidencial" required>
-                <option value="">Selecione</option>
-                <option value="sim">Sim</option>
-                <option value="nao">Não</option>
-            </select>
-        </div>
-        
-        <div class="form-group">
-            <label for="descricao-vaga">Descrição da Vaga</label>
-            <textarea id="descricao-vaga" name="descricao-vaga" rows="5" required></textarea>
-        </div>
-
-        <div class="form-group">
-            <label for="requisitos-vaga">Requisitos da Vaga</label>
-            <textarea id="requisitos-vaga" name="requisitos-vaga" rows="5" required></textarea>
-        </div>
-
-        <button type="submit">Enviar Solicitação</button>
+  <body>
+    <form id="vagaForm">
+      <div class="form-group">
+        <label for="nome-vaga">Nome da Vaga:</label>
+        <select id="nome-vaga" name="nome-vaga" required>
+          <option value="" disabled selected>Selecione...</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="motivos">Tipo da solicitação:</label>
+        <select id="motivos" name="motivos" required>
+          <option value="" disabled selected>Selecione...</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="colaborador">Colaborador:</label>
+        <select id="colaborador" name="colaborador" required>
+          <option value="" disabled selected>Selecione...</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="vaga-confidencial">Vaga Confidencial:</label>
+        <select id="vaga-confidencial" name="vaga-confidencial" required>
+          <option value="" disabled selected>Selecione...</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="setor">Setor Smart:</label>
+        <select id="setor" name="setor" required>
+          <option value="" disabled selected>Selecione...</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="descricao-vaga">Descrição da Vaga:</label>
+        <textarea
+          id="descricao-vaga"
+          name="descricao-vaga"
+          rows="5"
+          required
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="requisitos-vaga">Requisitos da Vaga:</label>
+        <textarea
+          id="requisitos-vaga"
+          name="requisitos-vaga"
+          rows="5"
+          required
+        ></textarea>
+      </div>
+      <button type="submit" id="submit-button">Enviar Solicitação</button>
     </form>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
