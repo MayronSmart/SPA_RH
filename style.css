@@ -1,4 +1,4 @@
-/* Estilo básico para o formulário */
+/* Estilo geral para o corpo e layout */
 body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
@@ -10,6 +10,7 @@ body {
     height: 100vh;
 }
 
+/* Estilo do formulário */
 form {
     background-color: #ffffff;
     padding: 20px;
@@ -25,6 +26,7 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* Grupos de formulário */
 .form-group {
     margin-bottom: 15px;
 }
@@ -36,6 +38,7 @@ label {
     color: #555555;
 }
 
+/* Estilos de input, textarea e select */
 input,
 textarea,
 select {
@@ -45,12 +48,14 @@ select {
     border: 1px solid #dddddd;
     border-radius: 4px;
     box-sizing: border-box;
+    background-color: #ffffff;
 }
 
 textarea {
     resize: vertical;
 }
 
+/* Foco nos campos */
 input:focus,
 textarea:focus,
 select:focus {
@@ -59,6 +64,7 @@ select:focus {
     box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
 }
 
+/* Botões */
 button {
     display: block;
     width: 100%;
@@ -82,7 +88,7 @@ button:disabled {
     cursor: not-allowed;
 }
 
-/* Estilo para mensagens de erro */
+/* Estilo para campos desabilitados */
 select:disabled,
 input:disabled,
 textarea:disabled {
@@ -90,7 +96,7 @@ textarea:disabled {
     color: #999999;
 }
 
-/* Estilo para destaque de campo obrigatório */
+/* Validação */
 input:invalid,
 textarea:invalid,
 select:invalid {
@@ -101,4 +107,35 @@ input:invalid:focus,
 textarea:invalid:focus,
 select:invalid:focus {
     box-shadow: 0 0 4px rgba(220, 53, 69, 0.25);
+}
+
+/* Estilo específico para Select2 */
+.select2-container {
+    width: 100% !important;
+    /* Garante que o Select2 ocupa a largura total */
+}
+
+.select2-container .select2-selection--single {
+    height: 40px;
+    /* Harmoniza a altura com os outros campos */
+    padding: 6px 12px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #555555;
+    line-height: 40px;
+    /* Alinha o texto verticalmente */
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 38px;
+    /* Alinha a seta do Select2 */
+}
+
+/* Estilo para as mensagens de erro do Select2 */
+.select2-container--default .select2-selection--single:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
 }
